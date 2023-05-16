@@ -1,0 +1,47 @@
+.main {
+  @apply px-8 min-h-screen sm:px-2 space-y-16 w-screen bg-gray-900;
+  background-image: radial-gradient(hsla(0, 0%, 84.3%, 0.25) 1px, transparent 0),
+    radial-gradient(hsla(0, 0%, 84.3%, 0.1) 1px, transparent 0);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  -webkit-animation: slide 2s linear infinite;
+  animation: slide 4s linear infinite;
+}
+
+@keyframes slide {
+  100% {
+    background-position: 50px 0, 125px 25px;
+  }
+}
+
+.cardWrapper {
+  @apply col-span-10 sm:col-span-5 opacity-0;
+  animation: show 0.5s forwards;
+}
+
+@keyframes show {
+  to {
+    @apply opacity-100;
+  }
+}
+
+.appliedButton {
+  @apply text-white bg-blue-500 border border-blue-500 rounded-lg p-4 w-40;
+}
+
+.unappliedButton {
+  @apply text-white bg-transparent border border-blue-500 rounded-lg p-4 w-40;
+}
+
+@keyframes bounce {
+  40% {
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform: translateY(40px) rotate(-1deg);
+    transform: translateY(40px) rotate(-1deg);
+  }
+}
+
+.footer {
+  @apply pb-16 max-w-screen-lg xl:max-w-screen-xl mx-auto text-center sm:text-right text-gray-400 font-bold;
+}
